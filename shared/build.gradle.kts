@@ -1,0 +1,56 @@
+plugins {
+    alias(libs.plugins.kotlin.multiplatform)
+    alias(libs.plugins.android.library)
+}
+
+@OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
+kotlin {
+    targetHierarchy.default()
+
+    jvm()
+
+    androidTarget {
+        compilations.all {
+            kotlinOptions {
+                jvmTarget = "1.8"
+            }
+        }
+    }
+    
+    listOf(
+        iosX64(),
+        iosArm64(),
+        iosSimulatorArm64()
+    ).forEach {
+        it.binaries.framework {
+            baseName = "shared"
+
+            export(libs.decompose.decompose)
+            export(libs.essenty.lifecycle)
+            export(libs.essenty.backHandler)
+        }
+    }
+
+    sourceSets {
+        val commonMain by getting {
+            dependencies {
+                api(libs.decompose.decompose)
+                api(libs.essenty.lifecycle)
+                api(libs.essenty.backHandler)
+            }
+        }
+        val commonTest by getting {
+            dependencies {
+                implementation(kotlin("test"))
+            }
+        }
+    }
+}
+
+android {
+    namespace = "com.example.myapplication.shared"
+    compileSdk = libs.versions.android.compileSdk.get().toInt()
+    defaultConfig {
+        minSdk = libs.versions.android.minSdk.get().toInt()
+    }
+}
