@@ -42,8 +42,6 @@ kotlin {
 
     targets.withType<KotlinNativeTarget> {
         binaries.all {
-            binaryOptions["memoryModel"] = "experimental"
-            binaryOptions["freezing"] = "disabled"
             // TODO: the current compose binary surprises LLVM, so disable checks for now.
             freeCompilerArgs += "-Xdisable-phases=VerifyBitcode"
         }
