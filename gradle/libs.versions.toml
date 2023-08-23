@@ -3,6 +3,7 @@
 project = "1.0.0"
 kotlin = "1.9.0"
 agp = "8.1.0"
+jvmTarget = "11"
 
 android-minSdk = "24"
 android-compileSdk = "34"
