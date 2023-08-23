@@ -14,6 +14,6 @@ class DefaultRootComponent(
     override val model: Value<RootComponent.Model> = state
 
     override fun onUpdateGreetingText() {
-        state.update { it.copy(greetingText = "Welcome from ${getPlatform().name}") }
+        state.update { it.copy(greetingText = "Welcome from ${getPlatformName()}") }
     }
 }
