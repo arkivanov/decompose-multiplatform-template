@@ -16,10 +16,6 @@ android {
         versionName = "1.0"
     }
 
-    buildFeatures {
-        compose = true
-    }
-
     composeOptions {
         kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
     }
