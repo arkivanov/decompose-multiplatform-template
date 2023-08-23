@@ -27,7 +27,6 @@ kotlin {
 
             export(libs.decompose.decompose)
             export(libs.essenty.lifecycle)
-            export(libs.essenty.backHandler)
         }
     }
 
@@ -36,7 +35,6 @@ kotlin {
             dependencies {
                 api(libs.decompose.decompose)
                 api(libs.essenty.lifecycle)
-                api(libs.essenty.backHandler)
             }
         }
         val commonTest by getting {
