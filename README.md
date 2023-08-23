@@ -27,7 +27,7 @@ and the [Compose Multipaltform Template](https://github.com/JetBrains/compose-mu
 
 In order to work with this template you need the following tools:
 * [Android Studio](https://developer.android.com/studio)
-* The [Kotlin Multiplatform Mobile plugin](https://plugins.jetbrains.com/plugin/14936-kotlin-multiplatform-mobile)
+* (Optional) The [Kotlin Multiplatform Mobile plugin](https://plugins.jetbrains.com/plugin/14936-kotlin-multiplatform-mobile)
 
 Additionally, if you plan to write and run iOS-specific code on simulated or real devices, you need
 the following:
