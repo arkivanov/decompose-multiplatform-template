@@ -2,7 +2,7 @@
 
 project = "1.0.0"
 kotlin = "1.9.0"
-agp = "8.1.0"
+agp = "8.0.2"
 jvmTarget = "11"
 
 android-minSdk = "24"
@@ -10,15 +10,8 @@ android-compileSdk = "34"
 android-targetSdk = "34"
 
 compose-jetbrains = "1.5.0-beta02"
-compose-compiler = "1.5.0"
 
-androidx-appcompat = "1.6.1"
-androidx-core = "1.10.1"
 androidx-activityCompose = "1.8.0-alpha06"
-androidx-test-ext-junit = "1.1.5"
-junit = "4.13.2"
-espresso-core = "3.5.1"
-google-android-material = "1.9.0"
 
 decompose = "2.1.0-compose-experimental-alpha-07"
 essenty = "1.2.0-alpha-06"
@@ -33,18 +26,9 @@ jetbrains-compose = { id = "org.jetbrains.compose", version.ref = "compose-jetbr
 
 [libraries]
 
-android-core-coreKtx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core" }
 androidx-activity-activityCompose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidx-activityCompose" }
-androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
-androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
-androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
-junit-junit = { group = "junit", name = "junit", version.ref = "junit" }
-google-android-material = { group = "com.google.android.material", name = "material", version.ref = "google-android-material" }
 
 decompose-decompose = { group = "com.arkivanov.decompose", name = "decompose", version.ref = "decompose" }
 decompose-extensionsComposeJetbrains = { group = "com.arkivanov.decompose", name = "extensions-compose-jetbrains", version.ref = "decompose" }
 
 essenty-lifecycle = { group = "com.arkivanov.essenty", name = "lifecycle", version.ref = "essenty" }
-essenty-backHandler = { group = "com.arkivanov.essenty", name = "back-handler", version.ref = "essenty" }
-
-[bundles]
