@@ -21,7 +21,7 @@ that uses the Decompose framework for common logic with the UI framework(s) of y
 features you need.
 
 This project was inspired by the [sample project of Decompose](https://github.com/arkivanov/Decompose/tree/master/sample)
-and the [Compose Multipaltform Template](https://github.com/JetBrains/compose-multiplatform-template).
+and the [Compose Multiplatform Template](https://github.com/JetBrains/compose-multiplatform-template).
 
 ## Getting Started
 
@@ -92,12 +92,6 @@ be used.
 
 When using Android Studio you can simply select `app-android` from the run configurations and run
 the app.
-
-Alternatively you can launch the debug app via
-
-```bash
-./gradlew :app-android:assembleDebug
-```
 
 ### For Desktop
 
