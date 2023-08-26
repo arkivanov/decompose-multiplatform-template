@@ -18,6 +18,3 @@ venv
 /dist
 /mkdocs_material.egg-info
 .vscode
-app-ios-swift/app-ios-swift.xcworkspace/*
-app-ios-swift/app-ios-swift.xcodeproj/*
-!app-ios-swift/app-ios-swift.xcodeproj/project.pbxproj
