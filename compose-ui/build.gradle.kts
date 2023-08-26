@@ -36,11 +36,6 @@ kotlin {
                 implementation(libs.decompose.extensionsComposeJetbrains)
             }
         }
-        val commonTest by getting {
-            dependencies {
-                implementation(kotlin("test"))
-            }
-        }
     }
 }
 
