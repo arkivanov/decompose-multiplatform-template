@@ -1,0 +1,24 @@
+name: Build
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  macos-build:
+    name: Build on macOS
+    runs-on: macos-11
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: 17
+      - name: Build project
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: build
+      - name: Build app-ios-swift
+        run: xcodebuild -project app-ios-swift/app-ios-swift.xcodeproj -scheme app-ios-swift -sdk iphonesimulator -arch x86_64 build

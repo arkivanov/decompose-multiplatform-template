@@ -16,10 +16,6 @@ android {
         versionName = "1.0"
     }
 
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
-    }
-
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
