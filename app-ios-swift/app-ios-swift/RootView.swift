@@ -3,19 +3,27 @@ import shared
 
 struct RootView: View {
     private let root: RootComponent
-    
-    @StateValue
-    private var model: RootComponentModel
-    
+
     init(_ root: RootComponent) {
         self.root = root
-        _model = StateValue(root.model)
     }
     
     var body: some View {
-        VStack {
-            Button(action: root.onUpdateGreetingText) {
-                Text(model.greetingText)
+        StackView(
+            stackValue: StateValue(root.stack),
+            getTitle: {
+                switch $0 {
+                case is RootComponentChild.Main: return "Decompose Template"
+                case is RootComponentChild.Welcome: return "Welcome Screen"
+                default: return ""
+                }
+            },
+            onBack: root.onBackClicked
+        ) {
+            switch $0 {
+            case let child as RootComponentChild.Main: MainView(child.component)
+            case let child as RootComponentChild.Welcome: WelcomeView(child.component)
+            default: EmptyView()
             }
         }
     }
@@ -28,9 +36,7 @@ struct RootView_Previews: PreviewProvider {
 }
 
 class PreviewRootComponent : RootComponent {
-    let model: Value<RootComponentModel> = mutableValue(
-        RootComponentModel(greetingText: "Hello from Decompose!")
-    )
+    func onBackClicked(toIndex: Int32) {}
 
-    func onUpdateGreetingText() {}
+    var stack: Value<ChildStack<AnyObject, RootComponentChild>> = simpleChildStack(RootComponentChild.Main(component: PreviewMainComponent()))
 }

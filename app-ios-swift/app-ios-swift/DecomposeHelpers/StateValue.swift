@@ -1,6 +1,7 @@
 import SwiftUI
 import shared
 
+// Source: https://github.com/arkivanov/Decompose/blob/master/sample/app-ios/app-ios/DecomposeHelpers/StateValue.swift
 @propertyWrapper struct StateValue<T : AnyObject>: DynamicProperty {
     @ObservedObject
     private var obj: ObservableValue<T>
