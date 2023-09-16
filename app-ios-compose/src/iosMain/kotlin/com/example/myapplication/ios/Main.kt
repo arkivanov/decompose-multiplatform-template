@@ -8,8 +8,8 @@ import com.arkivanov.essenty.lifecycle.LifecycleRegistry
 import com.arkivanov.essenty.lifecycle.destroy
 import com.arkivanov.essenty.lifecycle.resume
 import com.arkivanov.essenty.lifecycle.stop
-import com.example.myapplication.RootContent
-import com.example.myapplication.shared.DefaultRootComponent
+import com.example.myapplication.root.RootContent
+import com.example.myapplication.shared.root.DefaultRootComponent
 import kotlinx.cinterop.BetaInteropApi
 import kotlinx.cinterop.ExperimentalForeignApi
 import kotlinx.cinterop.autoreleasepool
