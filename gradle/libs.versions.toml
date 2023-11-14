@@ -1,7 +1,7 @@
 [versions]
 
 project = "1.0.0"
-kotlin = "1.9.0"
+kotlin = "1.9.20"
 agp = "8.0.2"
 jvmTarget = "11"
 
@@ -9,12 +9,12 @@ android-minSdk = "24"
 android-compileSdk = "34"
 android-targetSdk = "34"
 
-compose-jetbrains = "1.5.0-beta02"
+compose-jetbrains = "1.5.10"
 
-androidx-activityCompose = "1.8.0-alpha06"
+androidx-activityCompose = "1.8.0"
 
-decompose = "2.1.0-compose-experimental-alpha-07"
-essenty = "1.2.0-alpha-06"
+decompose = "2.1.4-compose-experimental"
+essenty = "1.2.0"
 
 [plugins]
 
