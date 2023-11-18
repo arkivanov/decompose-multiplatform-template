@@ -4,13 +4,14 @@ import shared
 @main
 struct iOSApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self)
-        var appDelegate: AppDelegate
-        
-        var body: some Scene {
-            WindowGroup {
-                RootView(appDelegate.root)
-            }
+    var appDelegate: AppDelegate
+
+    var body: some Scene {
+        WindowGroup {
+            RootView(root: appDelegate.root)
+                .ignoresSafeArea(.all)
         }
+    }
 }
 
 class AppDelegate: NSObject, UIApplicationDelegate {

@@ -4,9 +4,8 @@ plugins {
     alias(libs.plugins.kotlin.parcelize)
 }
 
-@OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
 kotlin {
-    targetHierarchy.default()
+    applyDefaultHierarchyTemplate()
 
     jvm()
 
@@ -24,7 +23,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            baseName = "shared"
+            baseName = "shared" // Used in app-ios-swift
 
             export(libs.decompose.decompose)
             export(libs.essenty.lifecycle)
