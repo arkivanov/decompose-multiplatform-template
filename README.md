@@ -68,13 +68,13 @@ It makes use of the shared code from the modules `shared` and `compose-ui`.
 
 ### `app-ios-compose`
 
-This is a Kotlin module that contains and builds the iOS mobile application.
+This is an Xcode project that builds an iOS mobile application with Compose UI.
 
 It makes use of the shared code from the modules `shared` and `compose-ui`.
 
 ### `app-ios-swift`
 
-This is a Swift project that build an iOS mobile application.
+This is an Xcode project that builds an iOS mobile application with SwiftUI.
 
 This module uses only the `shared` module and SwiftUI for its UI (instead of Compose).
 
@@ -101,13 +101,11 @@ the app.
 
 ### For iOS (Compose)
 
-```bash
-./gradlew :app-ios-compose:iosDeployIPhone12ProDebug
-```
+If you have installed the Kotlin Multiplatform Mobile plugin you can simply select `app-ios-compose`
+from the run configurations and run the app.
 
-> **Note**
-> See [build.gradle.kts](app-ios-compose/build.gradle.kts) `deployConfigurations` for more
-> information.
+Alternatively you can open `app-ios-compose/app-ios-compose.xcodeproj` in XCode and launch the project
+from there.
 
 ### For iOS (Swift)
 
