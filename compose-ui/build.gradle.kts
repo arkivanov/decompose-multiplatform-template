@@ -23,14 +23,17 @@ kotlin {
         iosX64(),
         iosArm64(),
         iosSimulatorArm64()
-    ).forEach {
-        it.binaries.framework {
-            baseName = "shared" // Used in app-ios-compose
+    )
+        .takeIf { "XCODE_VERSION_MAJOR" in System.getenv().keys } // Export the framework only for Xcode builds
+        ?.forEach {
+            // This `shared` framework is exported for app-ios-compose
+            it.binaries.framework {
+                baseName = "shared" // Used in app-ios-compose
 
-            export(project(":shared"))
-            export(libs.decompose.decompose)
+                export(project(":shared"))
+                export(libs.decompose.decompose)
+            }
         }
-    }
 
     sourceSets {
         val commonMain by getting {
