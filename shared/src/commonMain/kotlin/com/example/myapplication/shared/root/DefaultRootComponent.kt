@@ -8,13 +8,12 @@ import com.arkivanov.decompose.router.stack.pop
 import com.arkivanov.decompose.router.stack.popTo
 import com.arkivanov.decompose.router.stack.push
 import com.arkivanov.decompose.value.Value
-import com.arkivanov.essenty.parcelable.Parcelable
-import com.arkivanov.essenty.parcelable.Parcelize
 import com.example.myapplication.shared.main.DefaultMainComponent
 import com.example.myapplication.shared.main.MainComponent
 import com.example.myapplication.shared.root.RootComponent.Child
 import com.example.myapplication.shared.welcome.DefaultWelcomeComponent
 import com.example.myapplication.shared.welcome.WelcomeComponent
+import kotlinx.serialization.Serializable
 
 class DefaultRootComponent(
     componentContext: ComponentContext,
@@ -25,6 +24,7 @@ class DefaultRootComponent(
     override val stack: Value<ChildStack<*, Child>> =
         childStack(
             source = navigation,
+            serializer = Config.serializer(),
             initialConfiguration = Config.Main,
             handleBackButton = true,
             childFactory = ::child,
@@ -52,11 +52,12 @@ class DefaultRootComponent(
         navigation.popTo(index = toIndex)
     }
 
-    private sealed interface Config : Parcelable {
-        @Parcelize
+    @Serializable
+    private sealed interface Config {
+        @Serializable
         data object Main : Config
 
-        @Parcelize
+        @Serializable
         data object Welcome : Config
     }
 }
