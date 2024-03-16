@@ -9,11 +9,11 @@ android-minSdk = "24"
 android-compileSdk = "34"
 android-targetSdk = "34"
 
-compose-jetbrains = "1.5.10"
+compose-jetbrains = "1.5.11"
 
 androidx-activityCompose = "1.8.0"
 
-decompose = "2.1.4-compose-experimental"
+decompose = "2.2.2-compose-experimental"
 essenty = "1.2.0"
 
 [plugins]
