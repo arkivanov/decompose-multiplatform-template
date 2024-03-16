@@ -18,19 +18,22 @@ kotlin {
             }
         }
     }
-    
+
     listOf(
         iosX64(),
         iosArm64(),
-        iosSimulatorArm64()
-    ).forEach {
-        it.binaries.framework {
-            baseName = "shared" // Used in app-ios-swift
+        iosSimulatorArm64(),
+    )
+        .takeIf { "XCODE_VERSION_MAJOR" in System.getenv().keys } // Export the framework only for Xcode builds
+        ?.forEach {
+            // This `shared` framework is exported for app-ios-swift
+            it.binaries.framework {
+                baseName = "shared" // Used in app-ios-swift
 
-            export(libs.decompose.decompose)
-            export(libs.essenty.lifecycle)
+                export(libs.decompose.decompose)
+                export(libs.essenty.lifecycle)
+            }
         }
-    }
 
     sourceSets {
         val commonMain by getting {

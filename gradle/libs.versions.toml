@@ -2,7 +2,7 @@
 
 project = "1.0.0"
 kotlin = "1.9.22"
-agp = "8.0.2"
+agp = "8.2.0"
 jvmTarget = "11"
 
 android-minSdk = "24"
