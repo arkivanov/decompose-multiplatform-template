@@ -14,7 +14,7 @@ compose-jetbrains = "1.5.11"
 androidx-activityCompose = "1.8.0"
 
 decompose = "2.2.2-compose-experimental"
-essenty = "1.2.0"
+essenty = "1.3.0"
 
 [plugins]
 
