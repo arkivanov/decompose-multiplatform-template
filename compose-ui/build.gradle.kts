@@ -32,6 +32,7 @@ kotlin {
 
                 export(project(":shared"))
                 export(libs.decompose.decompose)
+                export(libs.essenty.lifecycle)
             }
         }
 
