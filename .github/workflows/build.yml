@@ -7,7 +7,7 @@ on:
 jobs:
   macos-build:
     name: Build on macOS
-    runs-on: macos-latest
+    runs-on: macos-14
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -22,3 +22,5 @@ jobs:
           arguments: build
       - name: Build app-ios-swift
         run: xcodebuild -project app-ios-swift/app-ios-swift.xcodeproj -scheme app-ios-swift -sdk iphonesimulator -arch x86_64 build
+      - name: Build app-ios-compose
+        run: xcodebuild -project app-ios-compose/app-ios-compose.xcodeproj -scheme app-ios-compose -sdk iphonesimulator -arch x86_64 build
