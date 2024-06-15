@@ -1,7 +1,7 @@
 [versions]
 
 project = "1.0.0"
-kotlin = "1.9.23"
+kotlin = "2.0.0"
 agp = "8.2.0"
 jvmTarget = "11"
 
@@ -9,17 +9,18 @@ android-minSdk = "24"
 android-compileSdk = "34"
 android-targetSdk = "34"
 
-compose-jetbrains = "1.6.2"
+compose-jetbrains = "1.6.11"
 
 androidx-activityCompose = "1.9.0"
 
-decompose = "3.0.0"
-essenty = "2.0.0"
+decompose = "3.1.0"
+essenty = "2.1.0"
 
 [plugins]
 
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
