@@ -7,5 +7,5 @@ import com.example.myapplication.shared.main.PreviewMainComponent
 @Preview
 @Composable
 fun MainPreview() {
-    MainContent(PreviewMainComponent())
+    MainContent(PreviewMainComponent)
 }

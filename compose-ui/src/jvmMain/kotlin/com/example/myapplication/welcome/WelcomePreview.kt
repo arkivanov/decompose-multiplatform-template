@@ -7,6 +7,6 @@ import com.example.myapplication.shared.welcome.PreviewWelcomeComponent
 @Preview
 @Composable
 fun WelcomePreview() {
-    WelcomeContent(PreviewWelcomeComponent())
+    WelcomeContent(PreviewWelcomeComponent)
 }
 
