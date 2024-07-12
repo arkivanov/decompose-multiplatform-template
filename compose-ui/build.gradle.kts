@@ -54,6 +54,12 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
+                implementation(libs.decompose.decompose)
+                implementation(compose.preview)
+            }
+        }
+        val jvmMain by getting {
+            dependencies {
                 implementation(compose.preview)
             }
         }
