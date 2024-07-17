@@ -1,16 +1,12 @@
 package com.example.myapplication.shared.welcome
 
 import com.arkivanov.decompose.value.MutableValue
-import com.arkivanov.decompose.value.update
-import com.example.myapplication.shared.getPlatformName
 import com.example.myapplication.shared.welcome.WelcomeComponent.Model
 
 object PreviewWelcomeComponent : WelcomeComponent {
   override val model = MutableValue(Model())
 
-  override fun onUpdateGreetingText() {
-    model.update { it.copy(greetingText = "Welcome from ${getPlatformName()}") }
-  }
+  override fun onUpdateGreetingText() {}
 
-  override fun onBackClicked() = Unit
+  override fun onBackClicked() {}
 }
