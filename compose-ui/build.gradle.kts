@@ -63,15 +63,8 @@ android {
         minSdk = libs.versions.android.minSdk.get().toInt()
     }
 
-    buildFeatures { compose = true }
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-}
-
-dependencies {
-    // https://stackoverflow.com/a/68224436/1562087
-    debugImplementation(compose.uiTooling)
 }
