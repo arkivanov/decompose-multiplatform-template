@@ -124,5 +124,5 @@ We encourage you to explore Decompose's features further and try adding them int
 * [Add back button handlers for intercepting back button presses](https://arkivanov.github.io/Decompose/component/back-button/)
 
 You can also have a look at various integrations, including:
-* [State preservation with Essenty and Parcelize]() _(not available yet)_
-* [Integration of MVIKotlin for sharing code using MVI pattern]() _(not available yet)_
+
+* [Integration](https://github.com/IlyaGulya/TodoAppDecomposeMviKotlin) of [MVIKotlin](https://github.com/arkivanov/MVIKotlin) for sharing code using MVI pattern.
