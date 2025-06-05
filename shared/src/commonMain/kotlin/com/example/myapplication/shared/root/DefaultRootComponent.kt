@@ -6,7 +6,7 @@ import com.arkivanov.decompose.router.stack.StackNavigation
 import com.arkivanov.decompose.router.stack.childStack
 import com.arkivanov.decompose.router.stack.pop
 import com.arkivanov.decompose.router.stack.popTo
-import com.arkivanov.decompose.router.stack.push
+import com.arkivanov.decompose.router.stack.pushNew
 import com.arkivanov.decompose.value.Value
 import com.example.myapplication.shared.main.DefaultMainComponent
 import com.example.myapplication.shared.main.MainComponent
@@ -39,7 +39,7 @@ class DefaultRootComponent(
     private fun mainComponent(componentContext: ComponentContext): MainComponent =
         DefaultMainComponent(
             componentContext = componentContext,
-            onShowWelcome = { navigation.push(Config.Welcome) },
+            onShowWelcome = { navigation.pushNew(Config.Welcome) },
         )
 
     private fun welcomeComponent(componentContext: ComponentContext): WelcomeComponent =
